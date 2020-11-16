@@ -82,10 +82,17 @@ O Dockerfile possui toda a estrutura e comandos necessários para que ações se
 
 Após a criação do arquivo Dockerfile, você poderá criar sua própria image utilizando o seguinte comando:
 
-Exemplo de Dockerfile
-
-
-
 `$ docker build -t <seu-user>/nome-da-image>:<versao-da-image>`
+
+
+### Publicando image no Docker Hub
+
+O Dockerhub é um repositório aonde você pode disponibilizar suas imagens, de forma pública ou privada. Para que a publicação seja possível, você primeiramente terá que realizar o login em sua conta digitando 
+
+`$ docker login`
+
+Realizado o login basta realizar o push de sua image:
+
+`$ docker push <nome-da-image>`
 
 Fonte: Full Cycle - Aulão Docker - Comece com Docker do Zero
