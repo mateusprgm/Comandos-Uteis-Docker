@@ -31,33 +31,33 @@ Recomendação: Utilize o Windows Professional.
 ### Containers
 
 Executar um container:
-	...
-		docker run -it ubuntu /bin/bash
-	...
+
+`$ docker run -it ubuntu /bin/bash`
+
 Verificar containers em utilização:
-	...
-		docker ps
-	...
+	
+`$ docker ps`
+	
 Verificar todos os containers:
-	...
-		docker ps -a
-	...
+	
+`$ docker ps -a`
+
 Compartilhamento / Exposição de portas
-	...
-		docker run -p 8080:80 jboss/wildfly
-	...
+
+`$ docker run -p 8080:80 jboss/wildfly`
+
 Executar um container em segundo plano (modo datached)
-	...
-		docker run -d -p 8080:80 jboss/wildfly
-	...
+
+`$ docker run -d -p 8080:80 jboss/wildfly`
+
 Remover container após o stop
-	...
-		docker run --rm -d -p 8080:80 jboss/wildfly
-	...
+
+`$ docker run --rm -d -p 8080:80 jboss/wildfly`
+
 Remover todos os containers (-f para forçar até os que estão em execução a ser removido)
-	...
-		docker rm $(docker ps -a -q) -f
-	...
+
+`$ docker rm $(docker ps -a -q) -f`
+
 ### Imagens
 
 O que são imagens?
@@ -65,13 +65,12 @@ O que são imagens?
 Imagens a grosso modo são uma espécie de template de container que será gerado. A imagem é imutável. Toda imagem possui uma camada de gravação de arquivos.
 
 Remover uma imagem
-	...
-		docker rmi <nome da imagem>
-	...
+
+`$ docker rmi <nome da imagem>`
+
 Remover todas as imagens
-	...
-		docker rmi $(docker images -q)
-	...
+
+`$ docker rmi $(docker images -q)`
 
 ### Dockerfile
 
