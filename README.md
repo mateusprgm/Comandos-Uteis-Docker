@@ -78,5 +78,14 @@ Remover todas as imagens
 
 O Dockerfile possui toda a estrutura e comandos necessários para que ações sejam executadas no processo de "build", ou seja, no processo de construição de uma imagem.
 
+### Gerando build de uma imagem
+
+Após a criação do arquivo Dockerfile, você poderá criar sua própria image utilizando o seguinte comando:
+
+Exemplo de Dockerfile
+
+
+
+`$ docker build -t <seu-user>/nome-da-image>:<versao-da-image>`
 
 Fonte: Full Cycle - Aulão Docker - Comece com Docker do Zero
