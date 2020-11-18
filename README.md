@@ -95,4 +95,51 @@ Realizado o login basta realizar o push de sua image:
 
 `$ docker push <nome-da-image>`
 
+## Docker-Compose
+
+### O que é o docker-compose
+
+O docker-compose é uma ferramenta cujo o objetivo é facilitar o processo de executar containers docker de forma declarativa. Cada container é executado como um serviço.
+
+O arquivo utilizado para que o docker-compose seja executado com sucesso chama-se por padrão docker-compose.yaml.
+
+Exemplo:
+
+`
+	version:'3'
+	services:
+		hello-world:
+			image hello-world
+			volumes:
+			 - ./hello-world:/usr/share/hello-world/html/
+			ports:
+			 - 8080:80
+		jboss/wildfly:
+			image: jboss/wildfly
+			expose:
+			 - 6379
+`
+
+Se você verificar o exemplo acima, perceberá que teremos dois serviços a serem executados.
+
+1. O primeiro chama-se hello-world. Ele utilizará a imagem do hello-world como base e fará um compartilhamento de volume, ou seja, a pasta local do computador será compartilhada com o container. Nesse caso, tudo que existir na pasta hello-world do computador, será automaticamente replicado no endereço : /usr/share/hello-world/html/ do container. Também a porta 8080 será redirecionada para o computador: localhost:8080 automaticamente o docker fará o redirecionamento da requisição para a porta 80 do container.
+
+2. O segundo serviço chama-se jboss/wildfly e nesse caso é extremamente simples.
+Ele utiliza o jboss/wildfly como imagem base e expõe a porta 6379 do container. Isso significa que o container do hello-world poderá se comunicar na rede local criada pelo docker utilizando a porta 6379.
+
+### Comandos úteis para o docker-compospe
+
+Para iniciar os serviços declarados do docker-compose.yml, basta executar:
+`$ docker-compose up`
+
+Ao executar esse comando, os serviços serão inicializados, porém, você perceberá que seu terminal ficará bloqueado, uma vez que o processo está sendo executado. Para executar de forma desatachada, basta informar o parâmetro "-d" no final da instrução.
+
+Para encerrar os serviços, basta executar: 
+
+`$ docker-compose down`
+
+Caso queira ver de forma mais "organizada" somente os containers dos serviços sendo executados, basta rodar:
+
+`$ docker-compose ps`
+
 Fonte: Full Cycle - Aulão Docker - Comece com Docker do Zero
