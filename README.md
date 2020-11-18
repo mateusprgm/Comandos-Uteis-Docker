@@ -32,7 +32,7 @@ Recomendação: Utilize o Windows Professional.
 
 Executar um container:
 
-`$ docker run -it ubuntu /bin/bash`
+`$ docker run -it jboss/wildfly /bin/bash`
 
 Verificar containers em utilização:
 	
@@ -57,6 +57,10 @@ Remover container após o stop
 Remover todos os containers (-f para forçar até os que estão em execução a ser removido)
 
 `$ docker rm $(docker ps -a -q) -f`
+
+Para entrar dentro de um container em execução
+
+`$ docker exec -it id-container bash`
 
 ### Imagens
 
