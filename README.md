@@ -110,18 +110,18 @@ O arquivo utilizado para que o docker-compose seja executado com sucesso chama-s
 Exemplo:
 
 	
-	version:'3'
-	services:
-	  hello-world:
-		image hello-world
-		volumes:
-		 - ./hello-world:/usr/share/hello-world/html/
-		ports:
-		 - 8080:80
-		jboss/wildfly:
-		  image: jboss/wildfly
-		  expose:
-		   - 6379
+version: '3.4'
+
+services:
+  jboss:
+    image:  jboss/wildfly
+    container_name:  jboss_wildfly
+    ports:
+      - 8080:8080
+      - 9990:9990
+    volumes:
+      - "./artefatos:/opt/jboss/wildfly/standalone/deployments/"
+
 
 
 Se você verificar o exemplo acima, perceberá que teremos dois serviços a serem executados.
@@ -147,3 +147,6 @@ Caso queira ver de forma mais "organizada" somente os containers dos serviços s
 `$ docker-compose ps`
 
 Fonte: Full Cycle - Aulão Docker - Comece com Docker do Zero
+
+
+opt/jboss/wildfly/standalone/deployments/
