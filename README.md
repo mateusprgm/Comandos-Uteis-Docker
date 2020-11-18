@@ -62,6 +62,10 @@ Para entrar dentro de um container em execução
 
 `$ docker exec -it id-container bash`
 
+Para interromper um container
+
+`$ docker stop id-container`
+
 ### Imagens
 
 O que são imagens?
@@ -75,6 +79,10 @@ Remover uma imagem
 Remover todas as imagens
 
 `$ docker rmi $(docker images -q)`
+
+Listar images existentes
+
+`$ docker images`
 
 ### Dockerfile
 
