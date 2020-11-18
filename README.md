@@ -108,16 +108,16 @@ Exemplo:
 	
 		version:'3'
 		services:
-			hello-world:
-				image hello-world
-				volumes:
-				 - ./hello-world:/usr/share/hello-world/html/
-				ports:
-			 	- 8080:80
+		  hello-world:
+			image hello-world
+			volumes:
+			 - ./hello-world:/usr/share/hello-world/html/
+			ports:
+			 - 8080:80
 			jboss/wildfly:
-				image: jboss/wildfly
-				expose:
-			 	- 6379
+			  image: jboss/wildfly
+			  expose:
+			   - 6379
 
 
 Se você verificar o exemplo acima, perceberá que teremos dois serviços a serem executados.
