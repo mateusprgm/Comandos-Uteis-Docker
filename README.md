@@ -94,7 +94,7 @@ O Dockerfile possui toda a estrutura e comandos necessários para que ações se
 
 Após a criação do arquivo Dockerfile, você poderá criar sua própria image utilizando o seguinte comando:
 
-`$ docker build -t <seu-user>/nome-da-image>:<versao-da-image>`
+`$ docker build -t <seu-user><nome-da-image>:<versao-da-image>`
 
 
 ### Publicando image no Docker Hub
@@ -139,7 +139,7 @@ Se você verificar o exemplo acima, perceberá que teremos dois serviços a sere
 2. O segundo serviço chama-se jboss/wildfly e nesse caso é extremamente simples.
 Ele utiliza o jboss/wildfly como imagem base e expõe a porta 6379 do container. Isso significa que o container do hello-world poderá se comunicar na rede local criada pelo docker utilizando a porta 6379.
 
-### Comandos úteis para o docker-compospe
+### Comandos úteis para o docker-compose
 
 Para iniciar os serviços declarados do docker-compose.yml, basta executar:
 `$ docker-compose up`
