@@ -120,15 +120,15 @@ Exemplo:
 	
 version: '3.4'
 
-services:
-  jboss:
-    image:  jboss/wildfly
-    container_name:  jboss_wildfly
-    ports:
-      - 8080:8080
-      - 9990:9990
-    volumes:
-      - "./artefatos:/opt/jboss/wildfly/standalone/deployments/"
+	services:
+	  jboss:
+	    image:  jboss/wildfly
+	    container_name:  jboss_wildfly
+	    ports:
+	      - 8080:8080
+	      - 9990:9990
+	    volumes:
+	      - "./artefatos:/opt/jboss/wildfly/standalone/deployments/"
 
 
 
