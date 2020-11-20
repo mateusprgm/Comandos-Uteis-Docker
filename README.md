@@ -118,7 +118,7 @@ O arquivo utilizado para que o docker-compose seja executado com sucesso chama-s
 Exemplo:
 
 	
-version: '3.4'
+	version: '3.4'
 
 	services:
 	  jboss:
