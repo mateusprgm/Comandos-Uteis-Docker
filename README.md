@@ -94,7 +94,7 @@ O Dockerfile possui toda a estrutura e comandos necessários para que ações se
 
 Após a criação do arquivo Dockerfile, você poderá criar sua própria image utilizando o seguinte comando:
 
-`$ docker build -t <seu-user><nome-da-image>:<versao-da-image>`
+`$ docker build -t <seu-user><nome-da-image>:<versao-da-image> .`
 
 
 ### Publicando image no Docker Hub
