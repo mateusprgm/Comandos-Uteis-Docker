@@ -4,7 +4,7 @@
 
 ### Por que utilizar o Docker
 
-É um softwqare que utiliza um mecanismo de execução de containers através de processos.
+É um software que utiliza um mecanismo de execução de containers através de processos.
 
 ### Quais os pontos chave que o Docker utiliza para rodar de forma estável?
 
