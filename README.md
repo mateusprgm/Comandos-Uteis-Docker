@@ -155,6 +155,3 @@ Caso queira ver de forma mais "organizada" somente os containers dos serviços s
 `$ docker-compose ps`
 
 Fonte: Full Cycle - Aulão Docker - Comece com Docker do Zero
-
-
-opt/jboss/wildfly/standalone/deployments/
