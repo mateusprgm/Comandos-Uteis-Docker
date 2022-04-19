@@ -54,6 +54,10 @@ Remover container após o stop
 
 `$ docker run --rm -d -p 8080:80 jboss/wildfly`
 
+Remover container específico (-f para forçar o que está em execução à ser removido)
+
+`$ docker rm id_container -f`
+
 Remover todos os containers (-f para forçar até os que estão em execução à serem removidos)
 
 `$ docker rm $(docker ps -a -q) -f`
